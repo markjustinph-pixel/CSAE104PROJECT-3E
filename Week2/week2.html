@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+.container {
+  display: grid;
+  grid-template-areas:
+    "header header"
+    "header1 header1"
+    "menu content"
+    "footer footer";
+  grid-template-columns: 1fr 1fr;
+  gap: 3px;
+  background-color: dodgerblue;
+  padding: 5px;
+}
+.container div {
+  background-color: white;
+  padding: 10px;
+}
+.container div.header {
+  grid-area: header;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 80px;
+}
+.container div.header img {
+  position: absolute;
+  left: 10px;
+}
+.container div.header1 {
+  grid-area: header1;
+  text-align: center;
+}
+.container div.menu {
+  grid-area: menu;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  text-align: center;
+}
+.container div.menu div {
+  display: flex;
+  gap: 2px;
+  padding: 0;
+}
+.container div.content {
+  grid-area: content;
+  padding: 10px;
+}
+.container div.footer {
+  grid-area: footer;
+  text-align: center;  
+}
+</style>
+</head>
+<body>
+<div class="container">
+  <div class="header">
+    <img src="dmmmsu_logo.png" width="100" height="100">
+    <h2>Don Mariano Marcos Memorial State University</h2>
+  </div>
+  <div class="header1">
+    <h3>
+      <a href="week2.html">Home</a> | 
+      <a href="week2.html">About Us</a> | 
+      <a href="week2.html">Contact</a>
+    </h3>
+  </div>
+  <div class="menu">
+    <h3>Campus Notice</h3>
+    <div>
+      <img src="og_domain.png" width="160" height="200">
+      <img src="yuta_domain.png" width="160" height="200">
+      <img src="ancient_domain.png" width="160" height="200">
+    </div>
+  </div>
+  <div class="content">
+    <h3>Message</h3>
+    <form action="/action_page.php">
+      <label for="title">Title:</label><br>
+      <input type="text" id="title" name="title" style="width: 100%; box-sizing: border-box;"><br><br>
+      
+      <label for="message">Message:</label><br>
+      <textarea id="message" name="message" rows="4" style="width: 100%; box-sizing: border-box;"></textarea><br><br>
+      
+      <input type="submit" value="Post Notice">
+    </form>
+  </div>
+  <div class="footer"><h3>College of Computer Science</h3></div>
+</div>
+
+</body>
+</html>
